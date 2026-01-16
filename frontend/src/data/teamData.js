@@ -11,7 +11,7 @@ import Baljeet from "../assets/team/BaljeetKumarPatel.jpg";
 import Saik from "../assets/team/sania tehseen.jpg";
 import Kishan from "../assets/team/Kishan BS.jpeg";
 import Taskeen from "../assets/team/Taskeen R.jpg";
-
+import Balram from "../assets/team/Balaram.jpg";
 export const teamData = [
   {
     name: "Dr. Asha K",
@@ -53,7 +53,7 @@ export const teamData = [
     name: "Balram Pai H",
     position: "Technical Head",
     year: 2026,
-    image: m6,
+    image: Balram,
     description: "Leads technical development and innovation initiatives.",
   },
   {
@@ -211,7 +211,7 @@ export const teamData = [
     name: "Balram Pai H",
     position: "Technical Head",
     year: 2025,
-    image: m6,
+    image: Balram,
     description: "Guides students in avionics and radar systems.",
   },
 
