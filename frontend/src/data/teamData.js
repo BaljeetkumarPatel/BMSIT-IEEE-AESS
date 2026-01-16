@@ -13,7 +13,7 @@ import Kishan from "../assets/team/Kishan BS.jpeg";
 import Taskeen from "../assets/team/Taskeen R.jpg";
 import Balram from "../assets/team/Balaram.jpg";
 import Sushmitha from "../assets/team/Sushmitha.jpg";
-import Poorvi from "../assets/team/Poori M Suresh.jpg";
+import Poorvi from "../assets/team/Poorvi M Suresh.jpg";
 
 
 export const teamData = [
