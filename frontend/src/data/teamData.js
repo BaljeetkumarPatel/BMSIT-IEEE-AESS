@@ -10,7 +10,7 @@ import Hemanth from "../assets/team/Hemanth S.jpg";
 import Baljeet from "../assets/team/BaljeetKumarPatel.jpg";
 import Saik from "../assets/team/sania tehseen.jpg";
 import Kishan from "../assets/team/Kishan BS.jpeg";
-import Taskeen from "../assets/team/taskeen R.jpg";
+import Taskeen from "../assets/team/Taskeen R.jpg";
 
 export const teamData = [
   {
