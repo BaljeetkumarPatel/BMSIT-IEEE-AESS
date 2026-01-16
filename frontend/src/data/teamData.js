@@ -12,6 +12,10 @@ import Saik from "../assets/team/sania tehseen.jpg";
 import Kishan from "../assets/team/Kishan BS.jpeg";
 import Taskeen from "../assets/team/Taskeen R.jpg";
 import Balram from "../assets/team/Balaram.jpg";
+import Sushmitha from "../assets/team/Sushmitha.jpg";
+import Poorvi from "../assets/team/Poori M Suresh.jpg";
+
+
 export const teamData = [
   {
     name: "Dr. Asha K",
@@ -109,7 +113,7 @@ export const teamData = [
     name: "Poorvi M Suresh",
     position: "Volcom",
     year: 2026,
-    image: m2,
+    image: Poorvi,
     description: "Assists in planning and managing activities."
   },
   {
@@ -130,7 +134,7 @@ export const teamData = [
     name: "Sushmitha",
     position: "Volcom",
     year: 2026,
-    image: m2,
+    image: Sushmitha,
     description: "Supports event execution and coordination."
   },
 
