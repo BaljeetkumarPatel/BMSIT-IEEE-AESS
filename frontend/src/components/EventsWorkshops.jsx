@@ -54,6 +54,26 @@ const EventsWorkshops = ({ variant = "home" }) => {
       status: "completed",
       full: "Hackathon on navigation and control systems.",
     },
+    {
+      side: "left",
+      icon: "📡",
+      title: "IEEE AESS 2026 Execom & Volcom Interview",
+      desc: "Application form to join IEEE AESS 2026 Execom and Volcom.",
+      date: "13 Jan 2026",
+      location: "Online via Gmeet",
+      status: "completed",
+      full: "Application form to join IEEE AESS 2026 Execom and Volcom.",
+    },
+    {
+      side: "right",
+      icon: "📡",
+      title: "IEEE AESS 2026 Execom & Volcom ISelected list",
+      desc: "",
+      date: "13 Jan 2026",
+      location: "Online via Gmeet",
+      status: "completed",
+      full: "Application form to join IEEE AESS 2026 Execom and Volcom.",
+    },
   ];
 
   /* ================= SORT ================= */
@@ -74,6 +94,34 @@ const EventsWorkshops = ({ variant = "home" }) => {
     upcoming: "bg-cyan-500/15 text-cyan-400 border-cyan-400/40",
   };
 
+  /* ================= EXTRA: EVENT LINKS (ONLY ADDITION) ================= */
+  const eventLinks = {
+    "Radar Systems Workshop": {
+      pdf: "https://drive.google.com/file/d/1PWdnOf9bZHHugWFzDEs0qYMMYLvG2QFB/view?usp=drive_link",
+      result:
+        "https://drive.google.com/file/d/11jfxh9-nOUE6qyuMV09qpQzlayvd7ist/view?usp=drive_link",
+    },
+    "Annual Technical Symposium": {
+      pdf: "https://drive.google.com/file/d/1PWdnOf9bZHHugWFzDEs0qYMMYLvG2QFB/view?usp=drive_link",
+      register: "https://drive.google.com/file/d/1PWdnOf9bZHHugWFzDEs0qYMMYLvG2QFB/view?usp=drive_link",
+    },
+    "Industry Expert Lecture Series": {
+      pdf: "https://dummy-link.com/lecture.pdf",
+    },
+    "Avionics Hackathon": {
+      pdf: "https://dummy-link.com/hackathon.pdf",
+      result: "https://dummy-link.com/hackathon-result.pdf",
+    },
+    "IEEE AESS 2026 Execom & Volcom Interview": {
+      pdf: "https://dummy-link.com/interview.pdf",
+      result: "https://dummy-link.com/interview-result.pdf",
+    },
+    "IEEE AESS 2026 Execom & Volcom ISelected list": {
+      pdf: "https://dummy-link.com/selected.pdf",
+      result: "https://dummy-link.com/final-result.pdf",
+    },
+  };
+
   /* ================= PLANETS ================= */
   const planets = [
     { size: 6, orbit: 80, speed: 10 },
@@ -87,6 +135,7 @@ const EventsWorkshops = ({ variant = "home" }) => {
   ];
 
   const floatIcons = ["🚀", "🛰️", "☄️", "🪐", "📡"];
+  const links = activeEvent ? eventLinks[activeEvent.title] : null;
 
   return (
     <section
@@ -291,20 +340,74 @@ const EventsWorkshops = ({ variant = "home" }) => {
         </>
       )}
 
+      
+      {/* ================= MODAL ================= */}
       {/* ================= MODAL ================= */}
       {activeEvent && (
         <div className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center px-4">
-          <div className="relative max-w-2xl w-full p-6 rounded-xl bg-[#0a1230]">
+          <div className="relative max-w-2xl w-full p-6 rounded-xl bg-[#0a1230] border border-cyan-400/30">
+
+            {/* CLOSE */}
             <button
               onClick={() => setActiveEvent(null)}
               className="absolute top-3 right-3 text-cyan-400 text-xl"
             >
               ✕
             </button>
+
+            {/* TITLE */}
             <h3 className="text-cyan-300 font-semibold mb-2">
               {activeEvent.title}
             </h3>
-            <p className="text-sm text-gray-300">{activeEvent.full}</p>
+
+            {/* DESCRIPTION */}
+            <p className="text-sm text-gray-300 mb-6">
+              {activeEvent.full}
+            </p>
+
+            {/* ACTION BUTTONS */}
+            <div className="flex flex-wrap gap-4 justify-end">
+
+              {links?.pdf && (
+                <a
+                  href={links.pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-2 rounded-full
+                  border border-cyan-400 text-cyan-300
+                  hover:bg-cyan-400/10 transition"
+                >
+                  VIEW PDF
+                </a>
+              )}
+
+              {links?.register && (
+                <a
+                  href={links.register}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-2 rounded-full
+                  bg-cyan-400 text-black font-semibold
+                  hover:bg-cyan-300 transition"
+                >
+                  REGISTER
+                </a>
+              )}
+
+              {links?.result && (
+                <a
+                  href={links.result}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-2 rounded-full
+                  bg-green-500 text-black font-semibold
+                  hover:bg-green-400 transition"
+                >
+                  RESULT
+                </a>
+              )}
+
+            </div>
           </div>
         </div>
       )}
