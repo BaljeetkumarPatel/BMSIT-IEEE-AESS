@@ -6,7 +6,7 @@ import m4 from "../assets/team/member4.png";
 import m5 from "../assets/team/member5.png";
 import m6 from "../assets/team/member6.png";
 import m7 from "../assets/team/member7.png";
-import Hemanth from "../assets/team/hemanth S.jpg";
+import Hemanth from "../assets/team/Hemanth S.jpg";
 import Baljeet from "../assets/team/BaljeetKumarPatel.jpg";
 import Saik from "../assets/team/sania tehseen.jpg";
 import Kishan from "../assets/team/kishan BS.jpeg";
